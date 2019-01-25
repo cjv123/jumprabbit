@@ -1,0 +1,31 @@
+{
+  "ver": "2.2.0",
+  "uuid": "0d7a9a2d-7458-40d3-af0c-93aeadb3d083",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "subMetas": {
+    "icon_qiando": {
+      "ver": "1.0.3",
+      "uuid": "ffa11a24-1aa3-4d87-8d4f-4c008725bd2f",
+      "rawTextureUuid": "0d7a9a2d-7458-40d3-af0c-93aeadb3d083",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 84,
+      "height": 84,
+      "rawWidth": 84,
+      "rawHeight": 84,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

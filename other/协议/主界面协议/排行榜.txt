@@ -1,0 +1,34 @@
+1. 签到信息
+http://localhost/indexMobile.php?s=/Mj/User/userRank&rankType=3&page=1&perpage=10
+&sessionId=k6ol2qg912sf55i5k34fsv5gh5
+参数
+sessionId
+rankType 1速度 2距离 3胜率
+page 页码 默认1
+perpage 页数 默认10
+返回值
+{
+	data: {
+		count: 14, // 总数
+		myRank: 5, // 我的排名
+		list: [
+			{ // 数据   value 根据不同排行榜，返回不同种类的数据。（时间，距离，胜率）
+				userId: 6722,
+				nickname: "222222",
+				logo: "http://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqicfcbpCWucHotXKF9ZOAwjUSxgXFEPQ1LJyrPicznOpZ7GAZSicpnhoXnGQOZj7DhaSxCBiaBkoSRkQ/132",
+				sex: "1",
+				value: "88.00"
+			},
+			{
+				userId: 6721,
+				nickname: "222222",
+				logo: "http://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqicfcbpCWucHotXKF9ZOAwjUSxgXFEPQ1LJyrPicznOpZ7GAZSicpnhoXnGQOZj7DhaSxCBiaBkoSRkQ/132",
+				sex: "1",
+				value: "87.00"
+			},
+			...
+		],
+		sessionId: null
+	},
+	statusCode: 0
+}

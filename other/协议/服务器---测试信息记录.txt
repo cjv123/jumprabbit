@@ -1,0 +1,114 @@
+
+
+
+
+1. 创建房间
+{"o":1,"param":{"uid":1,"tableId":12,"name":"111111","tag":1,"sex":1,"headIcon":"http://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqicfcbpCWucHotXKF9ZOAwjUSxgXFEPQ1LJyrPicznOpZ7GAZSicpnhoXnGQOZj7DhaSxCBiaBkoSRkQ/132"}}
+{"o":1,"param":{"uid":2,"tableId":12,"name":"222222","tag":1,"sex":1,"headIcon":"http://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqicfcbpCWucHotXKF9ZOAwjUSxgXFEPQ1LJyrPicznOpZ7GAZSicpnhoXnGQOZj7DhaSxCBiaBkoSRkQ/132"}}
+
+8. 准备
+{"u":100011,"r":100044,"o":8}
+{"u":100012,"r":100044,"o":8}
+
+11. 跳，操作
+{"u":100004,"r":100044,"o":11,"j":1}
+{"u":100004,"r":100044,"o":11,"k":2,"j":1,"c":1}
+{"u":100009,"r":100044,"o":11,"k":2,"j":1}
+
+1. 创建房间
+{"o":1,"param":{"uid":3,"tableId":13,"name":"111111","tag":1,"sex":1,"headIcon":"http://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqicfcbpCWucHotXKF9ZOAwjUSxgXFEPQ1LJyrPicznOpZ7GAZSicpnhoXnGQOZj7DhaSxCBiaBkoSRkQ/132"}}
+{"o":1,"param":{"uid":4,"tableId":13,"name":"222222","tag":1,"sex":1,"headIcon":"http://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqicfcbpCWucHotXKF9ZOAwjUSxgXFEPQ1LJyrPicznOpZ7GAZSicpnhoXnGQOZj7DhaSxCBiaBkoSRkQ/132"}}
+
+8. 准备
+{"u":100011,"r":100047,"o":8}
+{"u":100012,"r":100047,"o":8}
+
+11. 跳，操作
+{"u":100011,"r":100047,"o":11,"j":1}
+{"u":100011,"r":100047,"o":11,"k":2,"j":1,"c":1}
+{"u":100012,"r":100047,"o":11,"k":2,"j":1}
+
+
+
+1. 创建房间
+{"o":1,"param":{"uid":5,"tableId":14,"name":"111111","tag":1,"sex":1,"headIcon":"http://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqicfcbpCWucHotXKF9ZOAwjUSxgXFEPQ1LJyrPicznOpZ7GAZSicpnhoXnGQOZj7DhaSxCBiaBkoSRkQ/132"}}
+{"o":1,"param":{"uid":6,"tableId":14,"name":"222222","tag":1,"sex":1,"headIcon":"http://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqicfcbpCWucHotXKF9ZOAwjUSxgXFEPQ1LJyrPicznOpZ7GAZSicpnhoXnGQOZj7DhaSxCBiaBkoSRkQ/132"}}
+
+8. 准备
+{"u":100014,"r":100051,"o":8}
+{"u":100019,"r":100051,"o":8}
+
+11. 跳，操作
+{"u":100014,"r":100051,"o":11,"j":1}
+{"u":100014,"r":100051,"o":11,"k":2,"j":1,"c":1}
+{"u":100019,"r":100051,"o":11,"k":2,"j":1}
+
+
+
+
+
+1. 创建房间
+{"o":1,"param":{"uid":7,"tableId":15,"name":"111111","tag":1,"sex":1,"headIcon":"http://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqicfcbpCWucHotXKF9ZOAwjUSxgXFEPQ1LJyrPicznOpZ7GAZSicpnhoXnGQOZj7DhaSxCBiaBkoSRkQ/132"}}
+{"o":1,"param":{"uid":9,"tableId":15,"name":"111111","tag":1,"sex":1,"headIcon":"http://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqicfcbpCWucHotXKF9ZOAwjUSxgXFEPQ1LJyrPicznOpZ7GAZSicpnhoXnGQOZj7DhaSxCBiaBkoSRkQ/132"}}
+8. 准备
+{"u":100022,"r":100054,"o":8}
+{"u":100030,"r":100054,"o":8}
+11. 跳，操作
+{"u":100022,"r":100054,"o":11,"j":1}
+{"u":100022,"r":100054,"o":11,"k":2,"j":1,"c":1}
+{"u":100030,"r":100054,"o":11,"k":1}
+
+
+{"o":1,"param":{"uid":8,"tableId":16,"name":"222222","tag":1,"sex":1,"headIcon":"http://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqicfcbpCWucHotXKF9ZOAwjUSxgXFEPQ1LJyrPicznOpZ7GAZSicpnhoXnGQOZj7DhaSxCBiaBkoSRkQ/132"}}
+{"o":1,"param":{"uid":10,"tableId":16,"name":"222222","tag":1,"sex":1,"headIcon":"http://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqicfcbpCWucHotXKF9ZOAwjUSxgXFEPQ1LJyrPicznOpZ7GAZSicpnhoXnGQOZj7DhaSxCBiaBkoSRkQ/132"}}
+{"o":1,"param":{"uid":11,"tableId":17,"name":"222222","tag":1,"sex":1,"headIcon":"http://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqicfcbpCWucHotXKF9ZOAwjUSxgXFEPQ1LJyrPicznOpZ7GAZSicpnhoXnGQOZj7DhaSxCBiaBkoSRkQ/132"}}
+{"o":1,"param":{"uid":12,"tableId":17,"name":"222222","tag":1,"sex":1,"headIcon":"http://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqicfcbpCWucHotXKF9ZOAwjUSxgXFEPQ1LJyrPicznOpZ7GAZSicpnhoXnGQOZj7DhaSxCBiaBkoSRkQ/132"}}
+{"o":1,"param":{"uid":13,"tableId":18,"name":"222222","tag":1,"sex":1,"headIcon":"http://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqicfcbpCWucHotXKF9ZOAwjUSxgXFEPQ1LJyrPicznOpZ7GAZSicpnhoXnGQOZj7DhaSxCBiaBkoSRkQ/132"}}
+{"o":1,"param":{"uid":14,"tableId":18,"name":"222222","tag":1,"sex":1,"headIcon":"http://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqicfcbpCWucHotXKF9ZOAwjUSxgXFEPQ1LJyrPicznOpZ7GAZSicpnhoXnGQOZj7DhaSxCBiaBkoSRkQ/132"}}
+{"o":1,"param":{"uid":15,"tableId":19,"name":"222222","tag":1,"sex":1,"headIcon":"http://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqicfcbpCWucHotXKF9ZOAwjUSxgXFEPQ1LJyrPicznOpZ7GAZSicpnhoXnGQOZj7DhaSxCBiaBkoSRkQ/132"}}
+{"o":1,"param":{"uid":16,"tableId":19,"name":"222222","tag":1,"sex":1,"headIcon":"http://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqicfcbpCWucHotXKF9ZOAwjUSxgXFEPQ1LJyrPicznOpZ7GAZSicpnhoXnGQOZj7DhaSxCBiaBkoSRkQ/132"}}
+{"o":1,"param":{"uid":17,"tableId":20,"name":"222222","tag":1,"sex":1,"headIcon":"http://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqicfcbpCWucHotXKF9ZOAwjUSxgXFEPQ1LJyrPicznOpZ7GAZSicpnhoXnGQOZj7DhaSxCBiaBkoSRkQ/132"}}
+{"o":1,"param":{"uid":18,"tableId":20,"name":"222222","tag":1,"sex":1,"headIcon":"http://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqicfcbpCWucHotXKF9ZOAwjUSxgXFEPQ1LJyrPicznOpZ7GAZSicpnhoXnGQOZj7DhaSxCBiaBkoSRkQ/132"}}
+{"o":1,"param":{"uid":19,"tableId":21,"name":"222222","tag":1,"sex":1,"headIcon":"http://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqicfcbpCWucHotXKF9ZOAwjUSxgXFEPQ1LJyrPicznOpZ7GAZSicpnhoXnGQOZj7DhaSxCBiaBkoSRkQ/132"}}
+{"o":1,"param":{"uid":20,"tableId":21,"name":"222222","tag":1,"sex":1,"headIcon":"http://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqicfcbpCWucHotXKF9ZOAwjUSxgXFEPQ1LJyrPicznOpZ7GAZSicpnhoXnGQOZj7DhaSxCBiaBkoSRkQ/132"}}
+
+{"u":100025,"r":100058,"o":8}
+{"u":100035,"r":100058,"o":8}
+{"u":100035,"r":100058,"o":11,"k":1}
+
+{"u":100039,"r":100059,"o":8}
+{"u":100043,"r":100059,"o":8}
+{"u":100043,"r":100059,"o":11,"k":1}
+
+{"u":100045,"r":100062,"o":8}
+{"u":100046,"r":100062,"o":8}
+{"u":100046,"r":100062,"o":11,"k":1}
+
+{"u":100048,"r":100066,"o":8}
+{"u":100050,"r":100066,"o":8}
+{"u":100050,"r":100066,"o":11,"k":1}
+
+{"u":100054,"r":100067,"o":8}
+{"u":100055,"r":100067,"o":8}
+{"u":100055,"r":100067,"o":11,"k":1}
+
+{"u":100058,"r":100069,"o":8}
+{"u":100062,"r":100069,"o":8}
+{"u":100062,"r":100069,"o":11,"k":1}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

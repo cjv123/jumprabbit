@@ -1,0 +1,40 @@
+1. 解锁皮肤
+http://localhost/indexMobile.php?s=/Mj/User/unlockSkin&skinId=2&sessionId=3vb7jhms1ro8dd96nu075sab64
+参数sessionId
+skinId 皮肤id
+
+返回值
+{
+		data: {
+			diamond: 3677,
+			}
+		sessionId: null
+	},
+	statusCode: 0
+}
+
+2. 皮肤信息
+http://localhost/indexMobile.php?s=/Mj/User/bagSkin
+参数sessionId
+
+{
+	data: {
+		skins: [
+		{
+			id: 1,// id
+			gold: 12,// 花费金币 
+			url: "http...",// 地址
+			open: 1 // 是否解封了
+		},
+		{
+			id: 2,
+			gold: 11,
+			url: "http...",
+			open: 1
+		},
+		。。。。。。
+		],
+		sessionId: null
+	},
+	statusCode: 0
+}

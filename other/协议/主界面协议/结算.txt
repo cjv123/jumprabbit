@@ -1,0 +1,69 @@
+1. 练习赛结算
+http://localhost/indexMobile.php?s=/Mj/Room/finishPractice&sessionId=k6ol2qg912sf55i5k34fsv5gh5
+
+参数
+sessionId
+value 时间
+roomId 房间id
+
+返回值
+{
+	data: {
+		sessionId: null
+	},
+	statusCode: 0
+}
+
+1. 死亡赛结算，竞速赛结束
+http://localhost/indexMobile.php?s=/Mj/Room/jieSuan&sessionId=k6ol2qg912sf55i5k34fsv5gh5
+
+参数
+sessionId
+value 竞速赛时间,死亡赛距离
+roomId 房间id
+type 1是竞速2是死亡
+win 胜负1胜0负
+
+返回值
+{
+	data: {
+                'value' => $value, 竞速赛时间,死亡赛距离
+                'win' => $win, 胜负1胜0负
+                'dayCount' => $dayCount, 今天连续局数
+                'keepWin' => $keepWin, 连胜局数
+                'keepWinGold' => $keepWinGold, 连胜金币
+                'gold' => $gold, 本局获得金币
+		sessionId: null
+	},
+	statusCode: 0
+}
+
+3. 金币结算
+http://localhost/indexMobile.php?s=/Mj/Room/jieSuanDiamond&sessionId=k6ol2qg912sf55i5k34fsv5gh5
+参数
+sessionId
+返回
+{
+	data: {
+                'diamond' => 1, 当前自己金币总数
+                'msg' => 您获得了{$getGold}金币！
+		sessionId: null
+	},
+	statusCode: 0
+}
+
+4. 分享，看视频双倍金币结算
+http://localhost/indexMobile.php?s=/Mj/Room/jieSuanShareDiamond&sessionId=k6ol2qg912sf55i5k34fsv5gh5
+参数
+sessionId
+movie 是否看视频了，1是0否
+share 是否分享了，1是0否
+返回
+{
+	data: {
+                'diamond' => 1, 当前自己金币总数
+                'msg' => 您获得了{$getGold}金币！
+		sessionId: null
+	},
+	statusCode: 0
+}

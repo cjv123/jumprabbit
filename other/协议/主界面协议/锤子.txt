@@ -1,0 +1,25 @@
+1. 使用锤子
+
+
+http://localhost/indexMobile.php?s=/Mj/User/hammer
+参数sessionId
+返回值
+
+{
+	data: {
+	sessionId: null
+	},
+	statusCode: 0
+}
+
+2. 获得锤子
+http://localhost/indexMobile.php?s=/Mj/User/getHammer&from=2
+参数
+	from 1是分享，2是看视频获得，3是拿道具礼包获得
+{
+	data: {
+	hammer: 112, // 最终锤子数目
+	sessionId: null
+	},
+	statusCode: 0
+}

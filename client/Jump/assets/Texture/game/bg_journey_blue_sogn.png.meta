@@ -1,0 +1,31 @@
+{
+  "ver": "2.2.0",
+  "uuid": "9f087b49-1cca-4910-85ac-fccbcad0ad86",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "subMetas": {
+    "bg_journey_blue_sogn": {
+      "ver": "1.0.3",
+      "uuid": "e5cb8039-420a-41ff-8403-ae0e84afcdec",
+      "rawTextureUuid": "9f087b49-1cca-4910-85ac-fccbcad0ad86",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 45,
+      "height": 21,
+      "rawWidth": 45,
+      "rawHeight": 21,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

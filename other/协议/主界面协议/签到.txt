@@ -1,0 +1,48 @@
+1. 签到信息
+http://localhost/indexMobile.php?s=/Mj/User/signList
+http://510k.qzyouxi.com/indexMobile.php?s=Mj/User/signList&sessionId=k6ol2qg912sf55i5k34fsv5gh5
+参数sessionId
+返回值
+{
+	data: {
+		info: [
+			{
+			day: 1, // 周几
+			diamond: 100, // 赠送的钻石
+			sign: 0 // 是否已经签到
+			},
+			{
+			day: 2,
+			diamond: 200,
+			sign: 1
+			},
+			{
+			day: 3,
+			diamond: 300,
+			sign: 1
+			},
+			。。。。。。
+		],
+		sign: 1, // 今天是否已经签到
+		sessionId: null
+	},
+	statusCode: 0
+}
+
+2. 签到
+
+
+http://localhost/indexMobile.php?s=/Mj/User/sign
+http://510k.qzyouxi.com/indexMobile.php?s=Mj/User/sign&sessionId=0spm5phcrmhmo3crhe5sgsov20
+参数sessionId
+返回值
+
+{
+	data: {
+		day: 3, // 周几
+		diamond: 300, // 玩家总的金币数量
+		msg: "签到成功，您获得300金币",
+		sessionId: null
+	},
+	statusCode: 0
+}

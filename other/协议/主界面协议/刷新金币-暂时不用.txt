@@ -1,0 +1,18 @@
+返回statusCode: 0,表示请求成功
+
+1. 刷新钻石
+
+http://jump.qzyouxi.com/indexMobile.php?s=Mj/User/userInfo&userId=100191
+
+参数
+userId  用户id
+
+返回值
+{
+	data: {
+		diamond: 276,
+	},
+	statusCode: 0
+}
+
+返回statusCode: 0,表示请求成功

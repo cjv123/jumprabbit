@@ -1,0 +1,84 @@
+
+1. oppp登陆。oppo登陆其实就是把客户端从oppo获取到的信息发送给服务器。
+在游戏创建房间的时候发给服务器的信息，服务器存储即算登陆，第一次登录则是注册。
+
+2. 微信登陆
+1.微信文档 https://developers.weixin.qq.com/miniprogram/dev/api/open-api/login/wx.login.html
+	1. 客户端调用wx.login() ，获得code。
+	2. 服务器使用code，登陆成功。然后发送sessionId给客户端。用户下次登陆即用sessionId来登陆。
+	3. 登陆完成之后。 https://developers.weixin.qq.com/miniprogram/dev/api/open-api/user-info/wx.getUserInfo.html
+			客户端调用，wx.getUserInfo ，获得用户的信息，然后发给服务器，服务器存储起来。
+			此接口前需要请求 https://developers.weixin.qq.com/miniprogram/dev/api/open-api/authorize/wx.authorize.html
+			或者 https://developers.weixin.qq.com/miniprogram/dev/api/open-api/setting/wx.getSetting.html
+			让用户授权。
+	4. 然后就开始游戏了。
+
+3. 登陆接口：
+
+http://localhost/indexMobile.php?s=/Mj/Login/login&loginType=1&code=...
+第一次登录
+参数code
+返回
+{
+	data: {
+		sessionId: "g3cmu6dd61d7ictorvv6lca5u2", // 缓存sessionid
+	},
+	statusCode: 0,
+}
+
+后续登陆
+http://localhost/indexMobile.php?s=/Mj/Login/login&loginType=1&sessionId=3vb7jhms1ro8dd96nu075sab64
+参数	sessionId sessionid
+	客户端先用sessiond请求（是为了自动登陆），如果请求成功则进入游戏，如果请求失败则跳转到登陆界面
+{
+	data: {
+		sessionId: "g3cmu6dd61d7ictorvv6lca5u2", // 缓存sessionid
+		// user信息在wx.getUserInfo成功之后，登陆即会返回，否则只返回id，userId，
+		user: {
+			phone: "15259117938", // 手机号
+			id: "70", // 自增id
+			userId: "120004", // 用户id
+			sex: "1", // 性别1男0女
+			nickname: "15259117", // 昵称
+			logo: "http://cdn.qzyouxi.com/majiang/logo/default.png", // 头像地址
+			diamond: "10", // 钻石数量 
+			winNum: "0", // 胜场数目
+			allNum: "0", // 全部场数
+			winRate: "0%" // 胜率
+		},
+	},
+	statusCode: 0,
+}
+
+4. login接口之后，客户端需要请求，来获取用户的信息 wx.getUserInfo
+http://localhost/indexMobile.php?s=/Mj/User/getUserInfo&wxdata=1&sessionId=3vb7jhms1ro8dd96nu075sab64
+客户端请求此接口前，需要调用wx.getSetting或者wx.authorize，获得用户的授权，成功之后永久使用，所有接口使用。
+参数
+{
+	wxdata: 微信返回给客户端的全部信息。{userInfo:..,rawData:..,signature:..,encryptedData:..,iv..}
+	sessionId
+}
+返回
+{
+	data: {
+		sessionId: "g3cmu6dd61d7ictorvv6lca5u2", // 缓存sessionid
+		// user信息在wx.getUserInfo成功之后，登陆即会返回，否则只返回id，userId，
+		user: {
+			phone: "15259117938", // 手机号
+			id: "70", // 自增id
+			userId: "120004", // 用户id
+			sex: "1", // 性别1男0女
+			nickname: "15259117", // 昵称
+			logo: "http://cdn.qzyouxi.com/majiang/logo/default.png", // 头像地址
+			diamond: "10", // 钻石数量 
+			winNum: "0", // 胜场数目
+			allNum: "0", // 全部场数
+			winRate: "0%" // 胜率
+		},
+	},
+	statusCode: 0,
+}
+
+
+
+3. 退出 - 目前没有退出功能
