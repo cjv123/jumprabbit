@@ -1,5 +1,5 @@
-// import DataAccount from "../data/DataAccount";
-// import DataManager from "../data/DataManager";
+import DataAccount from "../data/DataAccount";
+import DataManager from "../data/DataManager";
 import NetConfig from "./NetConfig";
 
 export default class HttpTools {
@@ -29,12 +29,10 @@ export default class HttpTools {
         HttpTools.httpRequest(NetConfig.HttpUrlBase+url,callback);
     }
     
-    /*
     static httpRequestByBaseSession(url:string,callback:Function){
         let dataAccount:DataAccount = DataManager.getInstance().getDataInstance("account") as DataAccount;
         let reqUrl = NetConfig.HttpUrlBase+ url + "&sessionId="+dataAccount.Session;
         HttpTools.httpRequest(reqUrl,callback);
     }
-    */
 
 }
