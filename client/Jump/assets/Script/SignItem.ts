@@ -15,6 +15,8 @@ export default class SignItem extends cc.Component {
     public signFlagNode:cc.Node=null;
 
 
+
+
     // onLoad () {}
 
     start () {
@@ -39,6 +41,11 @@ export default class SignItem extends cc.Component {
     public setTitle(title:string){
         this.labelTitle.string = title;
     }
+
+    public setSignFlag(flag:boolean){
+        this.signFlagNode.active=flag;
+    }
+
 
     // update (dt) {}
 }
