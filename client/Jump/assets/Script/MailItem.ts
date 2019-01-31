@@ -11,6 +11,8 @@ export default class MailItem extends cc.Component {
     @property(cc.Label)
     public lableTime:cc.Label=null;
     
+    @property(cc.Node)
+    public buttonInfo:cc.Node=null;
 
     // LIFE-CYCLE CALLBACKS:
 

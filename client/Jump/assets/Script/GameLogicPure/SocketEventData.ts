@@ -1,6 +1,8 @@
 import WebSocketManager from "../Net/WebSocketManager";
 import GameLogicPure from "./GameLogicPure";
 import FrameCommandCache from "./FrameCommandCache";
+import DataAccount from "../data/DataAccount";
+import DataManager from "../data/DataManager";
 
 export default class SocketEventData{
     public static readonly event_socket_createroom:string="websocket_op_1";
@@ -16,6 +18,8 @@ export default class SocketEventData{
     private platfromUserId:number=0;
     private platfromOtherUserId:number=0;
     private player2Robot:boolean=false;
+
+    private memberInfoMap={};
     
     public set PlatfromUserId(v:number){
         this.platfromUserId=v;
@@ -29,6 +33,10 @@ export default class SocketEventData{
     public get PlatfromOtherUserId(){
         return this.platfromOtherUserId;
     }
+    public get OtherUserId(){
+        return this.otherUsedrId;
+    }
+
     
     private static instance:SocketEventData=null;
     
@@ -81,15 +89,17 @@ export default class SocketEventData{
     }
     
     private onCreateRoomEvent(event:cc.Event.EventCustom){
+        let dataAccount:DataAccount= DataManager.getInstance().getDataInstance("account") as DataAccount;
         let resData = event.getUserData();
         let data = resData["data"];
         this.rooomId = data["roomId"];
         let member = data["member"];
+        this.memberInfoMap=member;
         for (const key in member) {
-            if(Number(key)==this.platfromUserId){
-                this.userId = member[key];
+            if(Number(key)==dataAccount.UserId){
+                this.userId=dataAccount.UserId;
             }else{
-                this.otherUsedrId = member[key];
+                this.otherUsedrId=Number(key);
             }
         }
         let random = data["random"];
@@ -97,44 +107,13 @@ export default class SocketEventData{
     }
     
     
-    public createRoom(platformTableId:number=999,platfromParam:object=null,player2Robot:boolean=false){
-        if(platfromParam==null){
-            platfromParam ={
-                code:0,        //int 返回码，0为成功，其他为错误    
-                versionCode:"",//int 游戏大厅版本号（1002以下版本该字段可能为空，使用versionCode时需要判空）
-                message:"",    //string 返回消息
-                pkgName:"test",    //string 游戏包名
-                tableId:platformTableId,    //string 分配的桌子id
-                tableToken:"", //string 分配的桌子token
-                players : [ //玩家列表
-                    {
-                        uid:this.platfromUserId,            //string 玩家uid 根据game权限，该id不一定为真是玩家uid
-                        name:"name1",            //string 玩家昵称
-                        headIcon:"",        //string  玩家头像url
-                        sex:"M",            //string 玩家性别 ，M为男性，F为女性
-                        micStatus:1,        //int  麦克风状态 0: 关闭，1：打开
-                        speakerStatus:1,     //int  扬声器状态 0: 关闭，1 ：打开
-                        tag:0,            //int  0:正常玩家, 1: ai机器人
-                    },
-                    {
-                        uid:this.platfromOtherUserId,
-                        name:"name2",
-                        headIcon:"",
-                        sex:"F",
-                        micStatus:1,
-                        speakerStatus:1,
-                        tag:0,
-                    },
-                ]
-            };
-        }
-    
+    public createRoom(userid:number){
         let webSocketManager = WebSocketManager.getInstance(); 
         webSocketManager.sendObj({
             // r:0,
             // u:this.platfromUserId,
             o:1,
-            param:platfromParam
+            u:userid
         });
         
 

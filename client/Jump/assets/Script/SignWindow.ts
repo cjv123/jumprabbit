@@ -69,5 +69,9 @@ export default class SignWindow extends cc.Component {
         });
     }
 
+    public onCloseButtonClick() {
+        WindowsController.hideWindow(this.node);
+    }
+
     // update (dt) {}
 }

@@ -9,6 +9,8 @@ export default class HeaderUI extends cc.Component {
     @property(cc.Label)
     public labelName:cc.Label=null;
 
+
+
     // LIFE-CYCLE CALLBACKS:
 
     // onLoad () {}
@@ -31,6 +33,8 @@ export default class HeaderUI extends cc.Component {
             }
         }); 
     }
+
+
 
     // update (dt) {}
 }

@@ -51,19 +51,20 @@ export default class DataAccount extends DataBase{
 
 
     public login(callback) {
+        let code = Math.floor(Math.random()*1000);
         let self = this;
-        HttpTools.httpRequestByBase("s=/Mj/Login/login&loginType=1&code=1",function(resData){
+        HttpTools.httpRequestByBase("s=/Mj/Login/login&loginType=1&code="+code,function(resData){
             let statusCode = resData["statusCode"];
             let data = resData["data"];
             let sessionId = resData["sessionId"];
             let user = data["user"];
-            let userId = data["userId"];
-            let nickname = data["nickname"];
-            let logo = data["logo"];
-            let diamond = data["diamond"];
-            let winNum = data["winNum"];
-            let allNum = data["allNum"];
-            let winRate = data["winRate"];
+            let userId = user["userId"];
+            let nickname = user["nickname"];
+            let logo = user["logo"];
+            let diamond = user["diamond"];
+            let winNum = user["winNum"];
+            let allNum = user["allNum"];
+            let winRate = user["winRate"];
             self._userId = userId;
             self._nickname = nickname;
             self._logo = logo;

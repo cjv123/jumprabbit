@@ -75,6 +75,9 @@ export default class GameLogicPure{
     public get CurGameType():GameType{
         return this._curGameType;
     }
+    public set CurGameType(gameType:GameType){
+        this._curGameType=gameType;
+    }
     
     private curGameStatus:GameStatus=GameStatus.none;
     

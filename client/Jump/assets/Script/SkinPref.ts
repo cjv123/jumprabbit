@@ -21,6 +21,10 @@ export default class SkinPref extends cc.Component {
 
     }
 
+    public select(sel:boolean){
+        this.spriteIcon.node.active=sel;
+    }
+
 
 
     // update (dt) {}
