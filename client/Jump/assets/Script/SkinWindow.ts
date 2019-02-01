@@ -1,5 +1,10 @@
 import SkinPref from "./SkinPref";
 import WindowsController from "./WindowsController";
+import DataAccount from "./data/DataAccount";
+import DataManager from "./data/DataManager";
+import HttpTools from "./net/HttpTools";
+import DialogController from "./DialogController";
+import Loading from "./Loading";
 
 const {ccclass, property} = cc._decorator;
 
@@ -12,6 +17,8 @@ export default class SkinWindow extends cc.Component {
     @property([SkinPref])
     public spriteSkins:SkinPref[]=[];
 
+    
+
     private curIndex:number=0;
 
     // LIFE-CYCLE CALLBACKS:
@@ -19,7 +26,9 @@ export default class SkinWindow extends cc.Component {
     // onLoad () {}
 
     start () {
-
+        let dataAccount:DataAccount = DataManager.getInstance().getDataInstance("account") as DataAccount;
+        this.curIndex = dataAccount.Skin;
+        this.setSkin();
     }
 
     setSkin(){
@@ -54,7 +63,14 @@ export default class SkinWindow extends cc.Component {
     }
 
     public onSkinUseButtonClick(){
-
+        Loading.showLoading(true);
+        HttpTools.httpRequestByBaseSession("s=/Mj/User/useSkin&skinId="+this.curIndex,function(resData){
+            let ret = resData["statusCode"];
+            if(ret==0){
+                DialogController.show("皮肤设置成功");
+            }
+            Loading.showLoading(false);
+        });
     }
 
     // update (dt) {}

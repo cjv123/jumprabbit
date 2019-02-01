@@ -44,6 +44,20 @@ export default class DataAccount extends DataBase{
         this._session=v;
     }
 
+    private _skin:number=0;
+    public set Skin(skin:number){
+        this._skin = skin;
+    }
+    public get Skin(){
+        return this._skin;
+    }
+    private _hammer:number=0;
+    public get Hammer(){
+        return this._hammer;
+    }
+    public set Hammer(v){
+        this._hammer=v;
+    }
     
     public constructor() {
         super();
@@ -65,6 +79,8 @@ export default class DataAccount extends DataBase{
             let winNum = user["winNum"];
             let allNum = user["allNum"];
             let winRate = user["winRate"];
+            let skinId = user["skinId"];
+            let hammer = user["hammer"];
             self._userId = userId;
             self._nickname = nickname;
             self._logo = logo;
@@ -73,6 +89,8 @@ export default class DataAccount extends DataBase{
             self._allNum = allNum;
             self._winRate = winRate;
             self._session = sessionId;
+            self._skin = skinId;
+            self._hammer = hammer;
 
             if(callback){
                 callback(statusCode);

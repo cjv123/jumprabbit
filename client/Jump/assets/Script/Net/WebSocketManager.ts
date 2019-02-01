@@ -88,4 +88,10 @@ export default class WebSocketManager {
         let buf:string = JSON.stringify(obj);
         this.send(buf);
     }
+
+    public close(){
+        if(this._webSocket){
+            this._webSocket.close();
+        }
+    }
 }

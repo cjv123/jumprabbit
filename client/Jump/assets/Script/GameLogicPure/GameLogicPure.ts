@@ -53,6 +53,10 @@ export default class GameLogicPure{
     public set FrameIndex(v:number){
         this.frameIndex=v;
     }
+
+    public get CurTime(){
+        return (this.frameIndex*(1/this.framePerSecond)).toFixed();
+    }
     
     //地图数据，0左，1右
     private mapData:LeftOrRight[]=null;
@@ -345,18 +349,16 @@ export default class GameLogicPure{
         let playerData:PlayerData = this.playersMap[userId];
         let otherPlayData:PlayerData=null;
         for (const keyUserId in this.playersMap) {
-            if(keyUserId!=userId) {
+            if(Number(keyUserId)!=userId) {
                 otherPlayData=this.playersMap[keyUserId];
                 break;
             }
         }
-        if(otherPlayData==null){
-            return;
-        }
+      
 
     
         for(let i=0;i<this.mapFrozenIndex.length;i++) {
-            if(otherPlayData.posMapIndex == this.mapFrozenIndex[i] && otherPlayData.forzend>0){
+            if(otherPlayData!=null && otherPlayData.posMapIndex == this.mapFrozenIndex[i] && otherPlayData.forzend>0){
                 continue;
             }
         

@@ -18,6 +18,7 @@ export default class SocketEventData{
     private platfromUserId:number=0;
     private platfromOtherUserId:number=0;
     private player2Robot:boolean=false;
+    private winUserId:number=0;
 
     private memberInfoMap={};
     
@@ -36,6 +37,10 @@ export default class SocketEventData{
     public get OtherUserId(){
         return this.otherUsedrId;
     }
+    public get WinUserId(){
+        return this.winUserId;
+    }
+
 
     
     private static instance:SocketEventData=null;
@@ -44,6 +49,7 @@ export default class SocketEventData{
         cc.game.on(SocketEventData.event_socket_createroom,this.onCreateRoomEvent,this);
         cc.game.on(SocketEventData.event_socket_jump,this.onJumpEvent,this);
         cc.game.on(SocketEventData.event_socket_ready,this.onReadyEvent,this);
+        cc.game.on(SocketEventData.event_socket_endgame,this.onEndGameEvent,this);
     }
     
     public static getInstance():SocketEventData{
@@ -52,6 +58,13 @@ export default class SocketEventData{
         }
         
         return SocketEventData.instance;
+    }
+
+    private onEndGameEvent(event:cc.Event.EventCustom){
+        let resData = event.getUserData();
+        let data = resData["data"];
+        let win = data["win"];
+        this.winUserId = win;
     }
     
     private onJumpEvent(event:cc.Event.EventCustom){
@@ -161,4 +174,6 @@ export default class SocketEventData{
             c:isEnd
         });
     }
+
+
 }
