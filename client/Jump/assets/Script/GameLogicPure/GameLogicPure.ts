@@ -60,7 +60,7 @@ export default class GameLogicPure{
     
     //地图数据，0左，1右
     private mapData:LeftOrRight[]=null;
-    private mapLength:number = 20;
+    private mapLength:number = 70;
     private mapFrozenIndex:number[]=null;
     private mapFrozenInterval:number=5;
     
@@ -90,7 +90,7 @@ export default class GameLogicPure{
     //冰冻解救应敲击次数
     private readonly iceSaveTimes:number = 10;
     //冰冻概率
-    private readonly forzenRate:number = 100;
+    private readonly forzenRate:number = 50;
     
     private readyTime:number=2;
     
@@ -211,12 +211,12 @@ export default class GameLogicPure{
     }
     
     private AIJumpTime:number=2; 
-    private AIJumpSucRate:number=70;
+    private AIJumpSucRate:number=85;
     
     private updateAI(dt){
         // return;
     
-        let jumpIntervalTime:number=2;
+        let jumpIntervalTime:number=0.8;
 
         for (const key in this.playersMap) {
             let playerData = this.playersMap[key];

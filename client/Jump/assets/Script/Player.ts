@@ -18,6 +18,9 @@ export default class Player extends cc.Component {
     public fallWaterPlayerSpriteFrame:cc.SpriteFrame=null;
     @property(cc.SpriteFrame)
     public playerSpriteFrame:cc.SpriteFrame=null;
+
+    @property([cc.SpriteFrame])
+    public skinSpriteFrame:cc.SpriteFrame[]=[];
     
     private _userId:number=0;
     public set UserId(v:number){
@@ -66,6 +69,10 @@ export default class Player extends cc.Component {
             this.waterAnimation.stop();
             this.getComponent(cc.Sprite).spriteFrame=this.playerSpriteFrame;
         }
+    }
+
+    public setSkin(skin:number){
+        // this.getComponent(cc.Sprite).spriteFrame = this.skinSpriteFrame[skin-1];
     }
 
     // update (dt) {}

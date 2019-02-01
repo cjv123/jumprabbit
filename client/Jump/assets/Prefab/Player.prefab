@@ -672,6 +672,17 @@
     "playerSpriteFrame": {
       "__uuid__": "35a8b9f5-5d35-4b30-adf6-8f893dfcc1ba"
     },
+    "skinSpriteFrame": [
+      {
+        "__uuid__": "30a0bb91-ff99-47d7-80db-deaf6c9619f2"
+      },
+      {
+        "__uuid__": "8e694b92-2e84-47dd-92cc-984e4559b2e0"
+      },
+      {
+        "__uuid__": "6013276a-e07d-409e-9e5c-55b9b59a462a"
+      }
+    ],
     "_id": ""
   },
   {

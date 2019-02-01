@@ -69,10 +69,12 @@ export default class Home extends cc.Component {
     }
 
     public onTrainingStart(){
+        Loading.showLoading(true);
         cc.director.loadScene("Game");
     }
 
     public onMatchButtonClick(){
+        Loading.showLoading(true);
         cc.director.loadScene("Match");
     }
 

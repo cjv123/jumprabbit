@@ -25,13 +25,15 @@ export default class HeaderUI extends cc.Component {
 
     public setHeaderIcon(imageUrl:string){
         let self = this;
-        cc.loader.loadRes(imageUrl,cc.SpriteFrame,function(err,spriteFrame:cc.SpriteFrame){
+        cc.loader.load({url:imageUrl,type:"png"},function(err,tex){
             if(err){
-                console.log("headerUI icon fail:"+err);
+                console.log(err.message);
+                console.log("heaerui headerimg load header img error");
             }else{
-                self.spriteHeader.spriteFrame=spriteFrame;
+                let spriteFrame = new cc.SpriteFrame(tex);
+                self.spriteHeader.spriteFrame= spriteFrame; 
             }
-        }); 
+        });
     }
 
 

@@ -5,6 +5,9 @@ import Bucket from "./Bucket";
 import MapMini from "./MapMini";
 import Header from "./Header";
 import ReadyGo from "./ReadyGo";
+import DataAccount from "./data/DataAccount";
+import DataManager from "./data/DataManager";
+import SocketEventData from "./GameLogicPure/SocketEventData";
 
 const {ccclass, property} = cc._decorator;
 
@@ -185,6 +188,8 @@ export default class MapRoad extends cc.Component {
     private initPlayer(playerInfo){
         this._playersArr=[];
         this._playerCurMapIndexMap={};
+
+        let dataAccount:DataAccount=DataManager.getInstance().getDataInstance("account") as DataAccount;
     
         let tileNodeStart:cc.Node = this._mapTileArr[0];
         for(let i=0;i<playerInfo.length;i++){
@@ -197,6 +202,15 @@ export default class MapRoad extends cc.Component {
             player.UserId = playerInfo[i];
             if(i==0){
                 player.setColor(true);
+            }
+
+            let memberinfoMap = SocketEventData.getInstance().MemberInfoMap;
+            let memberinfo = memberinfoMap[player.UserId];
+            if(memberinfo){
+                player.setHeaderImg(memberinfo["logo"]);
+            }
+            if(player.UserId!=dataAccount.UserId){
+                player.setSkin(2);
             }
             
             this._playerCurMapIndexMap[player.UserId]=0;

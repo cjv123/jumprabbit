@@ -21,6 +21,9 @@ export default class SocketEventData{
     private winUserId:number=0;
 
     private memberInfoMap={};
+    public get MemberInfoMap(){
+        return this.memberInfoMap;
+    }
     
     public set PlatfromUserId(v:number){
         this.platfromUserId=v;
@@ -106,6 +109,7 @@ export default class SocketEventData{
         let resData = event.getUserData();
         let data = resData["data"];
         this.rooomId = data["roomId"];
+        let robot = data["robot"];
         let member = data["member"];
         this.memberInfoMap=member;
         for (const key in member) {
@@ -114,6 +118,9 @@ export default class SocketEventData{
             }else{
                 this.otherUsedrId=Number(key);
             }
+        }
+        if(robot==this.OtherUserId){
+            this.player2Robot=true;
         }
         let random = data["random"];
         GameLogicPure.getInstance().setRandom(random);
@@ -140,7 +147,7 @@ export default class SocketEventData{
         let resData = event.getUserData(); 
         let s=resData["s"];
         if(s==0){
-            GameLogicPure.getInstance().ready([this.userId,this.otherUsedrId],false);
+            GameLogicPure.getInstance().ready([this.userId,this.otherUsedrId],this.player2Robot);
         }
     }
     

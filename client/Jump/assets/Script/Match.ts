@@ -67,7 +67,7 @@ export default class Match extends cc.Component {
         this.headerLeft.setHeaderIcon(selfMemberInfo["logo"]);
 
         this.headerRight.setName(otherMemberInfo["nickname"]);
-        this.headerLeft.setHeaderIcon(otherMemberInfo["logo"]);
+        this.headerRight.setHeaderIcon(otherMemberInfo["logo"]);
 
         let self=this;
         this.node.runAction(cc.sequence(cc.delayTime(3),
